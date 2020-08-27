@@ -1,0 +1,20 @@
+一、营销机会添加
+    1. 参数校验 （SaleChance对象）
+        customerName客户名     非空
+        linkMan联系人          非空
+        linkPhone手机号        非空，格式正确
+    2. 设置参数的默认值
+        createDate创建时间      默认当前系统时间
+        updateDate修改时间      默认当前系统时间
+        isValid是否有效         默认1=有效（1=有效，0=无效）
+        createMan创建人         默认是当前登录用户名（用户名称）
+        assignMan分配人
+            如果有值，表示已分配（用户ID）
+                state分配状态       1=已分配 （1=已分配，0=未分配）
+                assignTime分配时间  默认当前系统时间
+                devResult开发状态   1=开发中 （0=未开发，1=开发中，2=开发成功，3=开发失败）
+            如果没值，表示未分配（null）
+                state分配状态       0=未分配 （1=已分配，0=未分配）
+                assignTime分配时间  null
+                devResult开发状态   0=未开发 （0=未开发，1=开发中，2=开发成功，3=开发失败）
+    3. 执行添加操作，判断受影响的行数
